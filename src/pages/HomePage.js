@@ -12,13 +12,14 @@ import { motion } from "framer-motion";
 function HomePage() {
   return (
     <>
-      {/* Background Image Section */}
+      {/* Hero Background Image Section */}
       <div
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "400px", // Adjust height as needed
+          backgroundAttachment: "fixed",
+          minHeight: "85vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -27,7 +28,7 @@ function HomePage() {
           color: "white",
         }}
       >
-        {/* Semi-transparent overlay for better text readability */}
+        {/* Gradient overlay for better text readability */}
         <div
           style={{
             position: "absolute",
@@ -35,68 +36,124 @@ function HomePage() {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay with transparency
+            background:
+              "linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(25, 135, 84, 0.4) 100%)",
             zIndex: 1,
           }}
         ></div>
 
-        {/* Text Content Over Image */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            padding: "20px",
-            maxWidth: "80%",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "2.5rem",
-              fontWeight: "bold",
-              marginBottom: "10px",
-            }}
+        {/* Animated Content */}
+        <Container style={{ position: "relative", zIndex: 2 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            – Thriving Capital –
-          </h1>
-          <h2
-            style={{
-              fontSize: "2.5rem",
-              fontWeight: "bold",
-              marginBottom: "10px",
-            }}
-          >
-            Your Trusted Financial Advisors
-          </h2>
-          <ContactUsButton />
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          backgroundColor: "white",
-          padding: "32px 0",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "1.25rem",
-            fontWeight: 500,
-            color: "#198754",
-            margin: 0,
-            maxWidth: "700px",
-          }}
-        >
-          Providing tailored wealth management, tax planning, and investment
-          strategies to help you secure your financial future.
-        </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              style={{
+                display: "inline-block",
+                backgroundColor: "rgba(25, 135, 84, 0.2)",
+                padding: "8px 24px",
+                borderRadius: "50px",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                marginBottom: "2rem",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "0.95rem",
+                  fontWeight: "500",
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  color: "rgba(255, 255, 255, 0.95)",
+                }}
+              >
+                Welcome to Thriving Capital
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              style={{
+                fontSize: "3.5rem",
+                fontWeight: "800",
+                marginBottom: "1.5rem",
+                lineHeight: "1.2",
+                textShadow: "2px 4px 12px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              Your Trusted Financial Advisors
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              style={{
+                fontSize: "1.35rem",
+                fontWeight: "400",
+                marginBottom: "2.5rem",
+                maxWidth: "800px",
+                margin: "0 auto 2.5rem",
+                lineHeight: "1.7",
+                color: "rgba(255, 255, 255, 0.95)",
+                textShadow: "1px 2px 8px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              Providing tailored wealth management, tax planning, and investment
+              strategies to help you secure your financial future.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <ContactUsButton />
+            </motion.div>
+          </motion.div>
+        </Container>
       </div>
 
       {/* Services Section */}
-      <Container className="my-5">
-        <h2 className="text-center fw-bold">Our Services</h2>
+      <Container
+        className="my-5"
+        style={{ paddingTop: "4rem", paddingBottom: "2rem" }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-5"
+        >
+          <h2
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: "700",
+              color: "#1a1a1a",
+              marginBottom: "0.75rem",
+            }}
+          >
+            Our Services
+          </h2>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "#6c757d",
+              maxWidth: "700px",
+              margin: "0 auto",
+            }}
+          >
+            Comprehensive financial solutions tailored to your unique needs
+          </p>
+        </motion.div>
         <Row className="mt-4">
           {[
             {
@@ -436,8 +493,8 @@ function HomePage() {
                     }}
                   >
                     Take control of your financial future with expert guidance.
-                    Schedule a consultation today and discover how we can
-                    help you achieve your goals.
+                    Schedule a consultation today and discover how we can help
+                    you achieve your goals.
                   </p>
                 </motion.div>
 
