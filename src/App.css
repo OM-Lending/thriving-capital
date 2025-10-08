@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+/* Header Section */
+.header-section {
+  background: url("../assets/header-bg.jpg") center/cover no-repeat;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.header-section .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+/* Service Cards */
+.service-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+}
+
+/* Custom styles to improve dropdown item spacing */
+.dropdown-menu .dropdown-item {
+  padding: 10px 20px; /* Adjust padding */
+  margin-bottom: 5px; /* Adds spacing between items */
+}
+
