@@ -1,142 +1,478 @@
 import React from "react";
-import bgImage from "../assets/tBack4.jpg"; 
+import bgImage from "../assets/tBack4.jpg";
 import { ContactUsButton } from "../assets/ContactUsButton.js";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
-const typewriterText = "YYour Trusted Financial Advisors in Australia";
-const typingSpeed = 100; // Speed in ms per character
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
-};
 
 const AboutPage = () => {
   return (
-    <Container className="my-5">
-      {/* Background Image Section */}
-      <div className="about-bg text-center p-5">
-        <h1 className="fw-bold">About Us</h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          <Typewriter text={typewriterText} speed={typingSpeed} />
-        </motion.p>
+    <>
+      {/* Hero Section */}
+      <div
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "50vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          position: "relative",
+          color: "white",
+          marginTop: "-1rem",
+        }}
+      >
+        {/* Gradient overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 135, 84, 0.5) 100%)",
+            zIndex: 1,
+          }}
+        />
+
+        {/* Content */}
+        <Container style={{ position: "relative", zIndex: 2 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1
+              style={{
+                fontSize: "3rem",
+                fontWeight: "700",
+                marginBottom: "1rem",
+                textShadow: "2px 4px 12px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              About Us
+            </h1>
+            <p
+              style={{
+                fontSize: "1.3rem",
+                maxWidth: "700px",
+                margin: "0 auto",
+                lineHeight: "1.7",
+                textShadow: "1px 2px 8px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              Your Trusted Financial Advisors in Australia
+            </p>
+          </motion.div>
+        </Container>
       </div>
 
-      {/* About Content Section */}
-      <Row className="mt-4">
-        <Col md={6}>
-          <motion.div variants={fadeIn} initial="hidden" animate="visible">
-            <Image src={bgImage} alt="Financial Planning" fluid rounded />
-          </motion.div>
-        </Col>
-        <Col md={6}>
-          <motion.div variants={fadeIn} initial="hidden" animate="visible">
-            <h2 className="fw-bold">Who We Are</h2>
-            <p>
-              At Thriving Capital, we are committed to helping individuals and businesses make 
-              informed financial decisions with confidence. As a leading financial services 
-              company in Australia, we provide strategic financial planning, tax advisory 
-              services, and wealth management solutions tailored to your unique needs.
-            </p>
-            <p>
-              Whether you need expert financial advisory, tax planning, or wealth management, 
-              we are ready to guide you on your path to success.
-            </p>
-
-            {/* Rotating Button Animation */}
+      {/* Who We Are Section */}
+      <Container style={{ marginTop: "5rem", marginBottom: "5rem" }}>
+        <Row className="align-items-center g-5">
+          <Col lg={6}>
             <motion.div
-              initial={{ opacity: 0, rotate: -180, scale: 0.5 }}
-              animate={{ opacity: 1, rotate: 0, scale: 1 }}
-              transition={{ duration: 2.0, ease: "easeOut" }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <Link to="/contact">
-              <Button variant="success" href="/contact">Get Financial Advice</Button>
-              </Link>
+              <div
+                style={{
+                  backgroundImage: `url(${bgImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: "450px",
+                  borderRadius: "20px",
+                  boxShadow: "0 20px 60px rgba(0, 0, 0, 0.2)",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "linear-gradient(135deg, rgba(25, 135, 84, 0.15) 0%, rgba(25, 135, 84, 0.05) 100%)",
+                  }}
+                />
+              </div>
             </motion.div>
+          </Col>
+          <Col lg={6}>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2
+                style={{
+                  fontSize: "2.5rem",
+                  fontWeight: "700",
+                  color: "#1a1a1a",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Who We Are
+              </h2>
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  lineHeight: "1.8",
+                  color: "#4a4a4a",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                At Thriving Capital, we are committed to helping individuals and
+                businesses make informed financial decisions with confidence. As
+                a leading financial services company in Australia, we provide
+                strategic financial planning, tax advisory services, and wealth
+                management solutions tailored to your unique needs.
+              </p>
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  lineHeight: "1.8",
+                  color: "#4a4a4a",
+                  marginBottom: "2rem",
+                }}
+              >
+                Whether you need expert financial advisory, tax planning, or
+                wealth management, we are ready to guide you on your path to
+                success.
+              </p>
+              <ContactUsButton />
+            </motion.div>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* Mission Section */}
+      <div
+        style={{
+          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          padding: "5rem 0",
+        }}
+      >
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-5"
+          >
+            <h2
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: "700",
+                color: "#1a1a1a",
+                marginBottom: "1rem",
+              }}
+            >
+              Our Mission
+            </h2>
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#6c757d",
+                maxWidth: "800px",
+                margin: "0 auto",
+              }}
+            >
+              We empower our clients with the right financial tools and
+              knowledge to achieve long-term financial stability and success.
+            </p>
           </motion.div>
-        </Col>
-      </Row>
 
-      {/* Mission & Expertise Section */}
-      <motion.div variants={staggerContainer} initial="hidden" animate="visible">
-        <Row className="mt-5 text-center">
-          <Col>
-            <motion.h2 variants={fadeIn} className="fw-bold">Our Mission</motion.h2>
-            <motion.p variants={fadeIn}>
-              We empower our clients with the right financial tools and knowledge to achieve 
-              long-term financial stability and success.
-            </motion.p>
-          </Col>
-        </Row>
+          <Row className="g-4 mt-4">
+            {[
+              {
+                icon: "📊",
+                title: "Financial Advisory",
+                desc: "Smart money management tailored to your unique goals and aspirations.",
+                delay: 0.2,
+              },
+              {
+                icon: "💰",
+                title: "Investment Planning",
+                desc: "Expert insights and strategies to help grow and protect your wealth.",
+                delay: 0.4,
+              },
+              {
+                icon: "📈",
+                title: "Tax Strategies",
+                desc: "Maximize returns while ensuring full compliance with regulations.",
+                delay: 0.6,
+              },
+            ].map((item, idx) => (
+              <Col md={4} key={idx}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: item.delay }}
+                  viewport={{ once: true }}
+                >
+                  <Card
+                    style={{
+                      border: "none",
+                      borderRadius: "18px",
+                      padding: "2rem",
+                      height: "100%",
+                      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
+                      transition: "all 0.3s ease",
+                      background: "white",
+                    }}
+                    className="h-100"
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-10px)";
+                      e.currentTarget.style.boxShadow =
+                        "0 20px 40px rgba(25, 135, 84, 0.15)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow =
+                        "0 10px 30px rgba(0, 0, 0, 0.08)";
+                    }}
+                  >
+                    <div className="text-center">
+                      <div
+                        style={{
+                          fontSize: "3.5rem",
+                          marginBottom: "1.5rem",
+                        }}
+                      >
+                        {item.icon}
+                      </div>
+                      <h4
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "600",
+                          color: "#1a1a1a",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        {item.title}
+                      </h4>
+                      <p
+                        style={{
+                          fontSize: "1rem",
+                          color: "#6c757d",
+                          lineHeight: "1.7",
+                          margin: 0,
+                        }}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+                  </Card>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
 
-        <Row className="mt-4">
-          <Col md={4} className="text-center">
-            <motion.div variants={fadeIn}>
-              <h4>✔️ Financial Advisory</h4>
-              <p>Smart money management tailored to your unique goals.</p>
-            </motion.div>
-          </Col>
-          <Col md={4} className="text-center">
-            <motion.div variants={fadeIn}>
-              <h4>✔️ Investment Planning</h4>
-              <p>Expert insights to help grow your wealth.</p>
-            </motion.div>
-          </Col>
-          <Col md={4} className="text-center">
-            <motion.div variants={fadeIn}>
-              <h4>✔️ Tax Strategies</h4>
-              <p>Maximize returns while ensuring compliance.</p>
-            </motion.div>
-          </Col>
-        </Row>
-      </motion.div>
+      {/* Values Section */}
+      <Container style={{ marginTop: "5rem", marginBottom: "5rem" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-5"
+        >
+          <h2
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: "700",
+              color: "#1a1a1a",
+              marginBottom: "1rem",
+            }}
+          >
+            Our Core Values
+          </h2>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "#6c757d",
+              maxWidth: "700px",
+              margin: "0 auto",
+            }}
+          >
+            The principles that guide everything we do
+          </p>
+        </motion.div>
 
-      {/* Contact Section */}
-      <motion.div variants={fadeIn} initial="hidden" animate="visible">
-        <Row className="mt-5 text-center">
-          <Col>
-            <h3>🚀 Secure your financial future today!</h3>
-            <p>📞 Call us at <strong>1300 926 880</strong> for expert financial advice.</p>
-            <ContactUsButton/>
-          </Col>
+        <Row className="g-4">
+          {[
+            {
+              icon: "🎯",
+              title: "Client-Focused",
+              desc: "Your financial success is our top priority, and we tailor every strategy to meet your specific needs.",
+            },
+            {
+              icon: "🔒",
+              title: "Trustworthy",
+              desc: "We build lasting relationships based on transparency, integrity, and ethical practices.",
+            },
+            {
+              icon: "🚀",
+              title: "Results-Driven",
+              desc: "We are committed to delivering measurable results that exceed your expectations.",
+            },
+            {
+              icon: "💡",
+              title: "Innovative",
+              desc: "We leverage cutting-edge financial strategies and technology to stay ahead of the curve.",
+            },
+          ].map((value, idx) => (
+            <Col md={6} key={idx}>
+              <motion.div
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    padding: "1.5rem",
+                    background: "white",
+                    borderRadius: "15px",
+                    border: "2px solid #f0f0f0",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#198754";
+                    e.currentTarget.style.transform = "translateX(10px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "#f0f0f0";
+                    e.currentTarget.style.transform = "translateX(0)";
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "2.5rem",
+                      marginRight: "1.5rem",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {value.icon}
+                  </div>
+                  <div>
+                    <h5
+                      style={{
+                        fontSize: "1.25rem",
+                        fontWeight: "600",
+                        color: "#1a1a1a",
+                        marginBottom: "0.5rem",
+                      }}
+                    >
+                      {value.title}
+                    </h5>
+                    <p
+                      style={{
+                        fontSize: "1rem",
+                        color: "#6c757d",
+                        margin: 0,
+                        lineHeight: "1.7",
+                      }}
+                    >
+                      {value.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
-      </motion.div>
-    </Container>
+      </Container>
+
+      {/* CTA Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        style={{
+          marginTop: "5rem",
+          marginBottom: "5rem",
+        }}
+      >
+        <Container>
+          <div
+            style={{
+              background: "linear-gradient(135deg, #198754 0%, #0d6832 100%)",
+              borderRadius: "24px",
+              padding: "4rem 2rem",
+              position: "relative",
+              overflow: "hidden",
+              boxShadow: "0 20px 60px rgba(25, 135, 84, 0.3)",
+              textAlign: "center",
+            }}
+          >
+            {/* Decorative circles */}
+            <div
+              style={{
+                position: "absolute",
+                width: "300px",
+                height: "300px",
+                borderRadius: "50%",
+                background: "rgba(255, 255, 255, 0.1)",
+                top: "-150px",
+                right: "-100px",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                width: "200px",
+                height: "200px",
+                borderRadius: "50%",
+                background: "rgba(255, 255, 255, 0.08)",
+                bottom: "-100px",
+                left: "-50px",
+              }}
+            />
+
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <h2
+                style={{
+                  color: "white",
+                  fontSize: "2.5rem",
+                  fontWeight: "700",
+                  marginBottom: "1rem",
+                }}
+              >
+                Ready to Secure Your Financial Future?
+              </h2>
+              <p
+                style={{
+                  color: "rgba(255, 255, 255, 0.9)",
+                  fontSize: "1.15rem",
+                  marginBottom: "2rem",
+                  maxWidth: "600px",
+                  margin: "0 auto 2rem",
+                }}
+              >
+                Call us at <strong>1300 926 880</strong> or schedule a
+                consultation to discuss your financial goals.
+              </p>
+              <ContactUsButton />
+            </div>
+          </div>
+        </Container>
+      </motion.section>
+    </>
   );
 };
-
-const Typewriter = ({ text, speed }) => {
-  const [displayText, setDisplayText] = React.useState("");
-
-  React.useEffect(() => {
-    let i = 0;
-    setDisplayText(""); // Reset before starting
-
-    const interval = setInterval(() => {
-      if (i < text.length) {
-        setDisplayText((prev) => prev + text.charAt(i)); // Use `charAt(i)` to avoid undefined values
-        i++;
-      } else {
-        clearInterval(interval);
-      }
-    }, speed);
-
-    return () => clearInterval(interval);
-  }, [text, speed]); // Ensuring effect re-runs correctly
-
-  return <span>{displayText}</span>;
-};
-
 
 export default AboutPage;
