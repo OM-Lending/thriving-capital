@@ -45,14 +45,14 @@ const Header = () => {
               : "0 2px 10px rgba(0, 0, 0, 0.1)"
           };
           transition: all 0.3s ease;
-          padding: ${scrolled ? "0.5rem 0" : "0.75rem 0"};
+          padding: ${scrolled ? "0.3rem 0" : "0.5rem 0"};
         }
 
         .custom-nav-link {
           position: relative;
           color: rgba(255, 255, 255, 0.9) !important;
           font-weight: 500;
-          padding: 0.5rem 1rem !important;
+          padding: 0.4rem 0.85rem !important;
           transition: all 0.3s ease;
         }
 
@@ -90,7 +90,7 @@ const Header = () => {
           border: none !important;
           color: rgba(255, 255, 255, 0.9) !important;
           font-weight: 500;
-          padding: 0.5rem 1rem !important;
+          padding: 0.4rem 0.85rem !important;
           transition: all 0.3s ease;
         }
 
@@ -130,7 +130,7 @@ const Header = () => {
 
         .logo-img {
           transition: all 0.3s ease;
-          height: ${scrolled ? "45px" : "55px"};
+          height: ${scrolled ? "40px" : "48px"};
           width: auto;
         }
 
