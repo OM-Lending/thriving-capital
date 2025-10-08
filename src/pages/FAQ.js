@@ -1,122 +1,209 @@
 import React from "react";
-import { Container, Accordion } from "react-bootstrap";
+import { Container, Accordion, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
-import bgImage from "../assets/tBack2.jpg"; // Background image import
+import bgImage from "../assets/tBack2.jpg";
 
 const FAQ = () => {
+  const faqs = [
+    {
+      question: "What services does Thriving Capital offer?",
+      answer:
+        "We provide a range of financial services, including wealth management, investment strategies, financial advisory, and tax planning for individuals and businesses.",
+    },
+    {
+      question: "Who can benefit from your financial services?",
+      answer:
+        "Our services are designed for individuals looking to grow their wealth, businesses seeking financial stability, and anyone needing expert guidance on tax planning and investment strategies.",
+    },
+    {
+      question: "How can I get started with Thriving Capital?",
+      answer:
+        "You can contact us through our website, email, or phone to schedule a consultation. Our advisors will assess your financial goals and recommend the best strategies for you.",
+    },
+    {
+      question: "Is my financial information secure with Thriving Capital?",
+      answer:
+        "Yes, we prioritize confidentiality and use secure systems to protect your financial data. Your privacy and security are our top concerns.",
+    },
+    {
+      question: "Do you offer customized financial plans?",
+      answer:
+        "Absolutely! We tailor our financial strategies based on your unique goals, risk tolerance, and financial situation.",
+    },
+    {
+      question: "How do you charge for your financial advisory services?",
+      answer:
+        "Our pricing structure depends on the type of service. We offer transparent pricing and will discuss all fees upfront during your initial consultation.",
+    },
+    {
+      question: "Can you help with tax planning and compliance?",
+      answer:
+        "Yes, our tax accounting services ensure you meet compliance requirements while optimizing tax strategies to reduce liabilities and maximize savings.",
+    },
+    {
+      question: "Do you only serve clients in Australia?",
+      answer:
+        "While we are based in Australia, we may assist international clients depending on their financial needs. Contact us to discuss how we can help.",
+    },
+    {
+      question: "How often should I review my financial plan?",
+      answer:
+        "We recommend reviewing your financial plan at least once a year or whenever you experience major life changes, such as buying a home, changing jobs, or starting a business.",
+    },
+    {
+      question:
+        "Why should I choose Thriving Capital over other financial advisory firms?",
+      answer:
+        "We provide expert financial guidance, comprehensive wealth management, and a personalized approach to ensure your financial success. Our team is dedicated to helping you achieve long-term stability and growth.",
+    },
+  ];
+
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-        padding: "50px 0",
-      }}
-    >
-      <Container>
+    <>
+      <style>{`
+        .faq-accordion .accordion-item {
+          border: none;
+          background: white;
+          border-radius: 12px;
+          margin-bottom: 1rem;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .faq-accordion .accordion-item:hover {
+          box-shadow: 0 8px 25px rgba(25, 135, 84, 0.12);
+          transform: translateY(-2px);
+        }
+
+        .faq-accordion .accordion-button {
+          background: white;
+          color: #1a1a1a;
+          font-weight: 600;
+          font-size: 1.1rem;
+          padding: 1.5rem 1.75rem;
+          border: none;
+          transition: all 0.3s ease;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+          background: linear-gradient(135deg, #198754 0%, #0d6832 100%);
+          color: white;
+          box-shadow: none;
+        }
+
+        .faq-accordion .accordion-button:focus {
+          box-shadow: none;
+          border: none;
+        }
+
+        .faq-accordion .accordion-button::after {
+          filter: ${(props) =>
+            props.collapsed ? "none" : "brightness(0) invert(1)"};
+        }
+
+        .faq-accordion .accordion-body {
+          padding: 1.5rem 1.75rem;
+          font-size: 1rem;
+          line-height: 1.7;
+          color: #4a4a4a;
+          background: white;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed)::after {
+          filter: brightness(0) invert(1);
+        }
+      `}</style>
+
+      {/* Hero Section */}
+      <div
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "50vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          position: "relative",
+          color: "white",
+          marginTop: "-1rem",
+        }}
+      >
+        {/* Gradient overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 135, 84, 0.5) 100%)",
+            zIndex: 1,
+          }}
+        />
+
+        {/* Content */}
+        <Container style={{ position: "relative", zIndex: 2 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1
+              style={{
+                fontSize: "3rem",
+                fontWeight: "700",
+                marginBottom: "1rem",
+                textShadow: "2px 4px 12px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              Frequently Asked Questions
+            </h1>
+            <p
+              style={{
+                fontSize: "1.3rem",
+                maxWidth: "700px",
+                margin: "0 auto",
+                lineHeight: "1.7",
+                textShadow: "1px 2px 8px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              Find answers to common questions about our services
+            </p>
+          </motion.div>
+        </Container>
+      </div>
+
+      {/* FAQ Content */}
+      <Container style={{ marginTop: "5rem", marginBottom: "5rem" }}>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2 style={{ color: "white", textAlign: "center", marginBottom: "30px" }}>
-            Frequently Asked Questions
-          </h2>
-          <Accordion>
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>
-              What services does Thriving Capital offer?
-              </Accordion.Header>
-              <Accordion.Body>
-              We provide a range of financial services, including wealth management, investment strategies, financial advisory, and tax planning for individuals and businesses.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>
-              Who can benefit from your financial services?
-              </Accordion.Header>
-              <Accordion.Body>
-              Our services are designed for individuals looking to grow their wealth, businesses seeking financial stability, and anyone needing expert guidance on tax planning and investment strategies.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>
-              How can I get started with Thriving Capital?
-              </Accordion.Header>
-              <Accordion.Body>
-              You can contact us through our website, email, or phone to schedule a consultation. Our advisors will assess your financial goals and recommend the best strategies for you.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="3">
-              <Accordion.Header>
-              Is my financial information secure with Thriving Capital?
-              </Accordion.Header>
-              <Accordion.Body>
-              Yes, we prioritize confidentiality and use secure systems to protect your financial data. Your privacy and security are our top concerns.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="4">
-              <Accordion.Header>
-              Do you offer customized financial plans?
-              </Accordion.Header>
-              <Accordion.Body>
-              Absolutely! We tailor our financial strategies based on your unique goals, risk tolerance, and financial situation.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="5">
-              <Accordion.Header>
-              How do you charge for your financial advisory services?
-              </Accordion.Header>
-              <Accordion.Body>
-              Our pricing structure depends on the type of service. We offer transparent pricing and will discuss all fees upfront during your initial consultation.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="6">
-              <Accordion.Header>
-              Can you help with tax planning and compliance?
-              </Accordion.Header>
-              <Accordion.Body>
-              Yes, our tax accounting services ensure you meet compliance requirements while optimizing tax strategies to reduce liabilities and maximize savings.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="7">
-              <Accordion.Header>
-              Do you only serve clients in Australia?
-              </Accordion.Header>
-              <Accordion.Body>
-              While we are based in Australia, we may assist international clients depending on their financial needs. Contact us to discuss how we can help.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="8">
-              <Accordion.Header>
-              How often should I review my financial plan?
-              </Accordion.Header>
-              <Accordion.Body>
-              We recommend reviewing your financial plan at least once a year or whenever you experience major life changes, such as buying a home, changing jobs, or starting a business.
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="9">
-              <Accordion.Header>
-              Why should I choose Thriving Capital over other financial advisory firms?
-              </Accordion.Header>
-              <Accordion.Body>
-              We provide expert financial guidance, comprehensive wealth management, and a personalized approach to ensure your financial success. Our team is dedicated to helping you achieve long-term stability and growth.
-              </Accordion.Body>
-            </Accordion.Item>
+          <Accordion className="faq-accordion">
+            {faqs.map((faq, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <Accordion.Item eventKey={idx.toString()}>
+                  <Accordion.Header>{faq.question}</Accordion.Header>
+                  <Accordion.Body>{faq.answer}</Accordion.Body>
+                </Accordion.Item>
+              </motion.div>
+            ))}
           </Accordion>
         </motion.div>
       </Container>
-    </div>
+    </>
   );
 };
 
