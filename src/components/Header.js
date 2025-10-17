@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/Thriving Capital.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,14 +37,11 @@ const Header = () => {
       <style>{`
         .custom-navbar {
           background: ${
-            scrolled ? "rgba(25, 135, 84, 0.98)" : "rgba(25, 135, 84, 0.95)"
+            scrolled ? "rgba(15, 23, 42, 0.98)" : "rgba(15, 23, 42, 0.95)"
           };
           backdrop-filter: blur(10px);
-          box-shadow: ${
-            scrolled
-              ? "0 4px 20px rgba(0, 0, 0, 0.15)"
-              : "0 2px 10px rgba(0, 0, 0, 0.1)"
-          };
+          box-shadow: none;
+          border-bottom: 1px solid #334155;
           transition: all 0.3s ease;
           padding: ${scrolled ? "0.3rem 0" : "0.5rem 0"};
         }
@@ -65,24 +63,23 @@ const Header = () => {
           content: '';
           position: absolute;
           bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
+          left: 0;
           width: 0;
-          height: 2px;
-          background: white;
+          height: 3px;
+          background: #f59e0b;
           transition: width 0.3s ease;
         }
 
         .custom-nav-link:hover::after {
-          width: 70%;
+          width: 100%;
         }
 
         .custom-nav-link.active {
-          color: white !important;
+          color: #f59e0b !important;
         }
 
         .custom-nav-link.active::after {
-          width: 70%;
+          width: 100%;
         }
 
         .custom-dropdown-toggle {
@@ -104,28 +101,30 @@ const Header = () => {
         }
 
         .custom-dropdown-menu {
-          background: white;
-          border: none;
-          border-radius: 12px;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-          padding: 0.75rem 0;
+          background: #1e293b;
+          border: 1px solid #334155;
+          border-radius: 0;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+          padding: 0;
           margin-top: 0.5rem;
           min-width: 220px;
         }
 
         .custom-dropdown-item {
-          color: #333;
+          color: #e2e8f0;
           font-weight: 500;
           padding: 0.75rem 1.5rem !important;
           transition: all 0.3s ease;
-          border-left: 3px solid transparent;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .custom-dropdown-item:last-child {
+          border-bottom: none;
         }
 
         .custom-dropdown-item:hover {
-          background: rgba(25, 135, 84, 0.08);
-          border-left-color: #198754;
-          color: #198754;
-          padding-left: 1.75rem !important;
+          background: #0f172a;
+          color: #f59e0b;
         }
 
         .logo-img {
@@ -159,7 +158,7 @@ const Header = () => {
             style={{ transition: "all 0.3s ease" }}
           >
             <img
-              src={`${process.env.PUBLIC_URL}/ThrLogo-3.png`}
+              src={logo}
               alt="Thriving Capital Logo"
               className="logo-img d-inline-block align-top"
             />

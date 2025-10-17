@@ -33,7 +33,7 @@ const AboutPage = () => {
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 135, 84, 0.5) 100%)",
+              "linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%)",
             zIndex: 1,
           }}
         />
@@ -86,8 +86,8 @@ const AboutPage = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: "450px",
-                  borderRadius: "20px",
-                  boxShadow: "0 20px 60px rgba(0, 0, 0, 0.2)",
+                  borderRadius: "0",
+                  border: "1px solid #334155",
                   position: "relative",
                   overflow: "hidden",
                 }}
@@ -114,7 +114,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "2.5rem",
                   fontWeight: "700",
-                  color: "#1a1a1a",
+                  color: "#f59e0b",
                   marginBottom: "1.5rem",
                 }}
               >
@@ -124,7 +124,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "1.1rem",
                   lineHeight: "1.8",
-                  color: "#4a4a4a",
+                  color: "#cbd5e1",
                   marginBottom: "1.5rem",
                 }}
               >
@@ -138,7 +138,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "1.1rem",
                   lineHeight: "1.8",
-                  color: "#4a4a4a",
+                  color: "#cbd5e1",
                   marginBottom: "2rem",
                 }}
               >
@@ -155,8 +155,10 @@ const AboutPage = () => {
       {/* Mission Section */}
       <div
         style={{
-          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          background: "#0f172a",
           padding: "5rem 0",
+          borderTop: "1px solid #334155",
+          borderBottom: "1px solid #334155",
         }}
       >
         <Container>
@@ -171,7 +173,7 @@ const AboutPage = () => {
               style={{
                 fontSize: "2.5rem",
                 fontWeight: "700",
-                color: "#1a1a1a",
+                color: "#f59e0b",
                 marginBottom: "1rem",
               }}
             >
@@ -180,7 +182,7 @@ const AboutPage = () => {
             <p
               style={{
                 fontSize: "1.2rem",
-                color: "#6c757d",
+                color: "#94a3b8",
                 maxWidth: "800px",
                 margin: "0 auto",
               }}
@@ -220,24 +222,19 @@ const AboutPage = () => {
                 >
                   <Card
                     style={{
-                      border: "none",
-                      borderRadius: "18px",
+                      border: "1px solid #334155",
+                      borderRadius: "0",
                       padding: "2rem",
                       height: "100%",
-                      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
                       transition: "all 0.3s ease",
-                      background: "white",
+                      background: "#1a2332",
                     }}
                     className="h-100"
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = "translateY(-10px)";
-                      e.currentTarget.style.boxShadow =
-                        "0 20px 40px rgba(25, 135, 84, 0.15)";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow =
-                        "0 10px 30px rgba(0, 0, 0, 0.08)";
                     }}
                   >
                     <div className="text-center">
@@ -253,7 +250,7 @@ const AboutPage = () => {
                         style={{
                           fontSize: "1.4rem",
                           fontWeight: "600",
-                          color: "#1a1a1a",
+                          color: "#f59e0b",
                           marginBottom: "1rem",
                         }}
                       >
@@ -262,7 +259,7 @@ const AboutPage = () => {
                       <p
                         style={{
                           fontSize: "1rem",
-                          color: "#6c757d",
+                          color: "#cbd5e1",
                           lineHeight: "1.7",
                           margin: 0,
                         }}
@@ -291,7 +288,7 @@ const AboutPage = () => {
             style={{
               fontSize: "2.5rem",
               fontWeight: "700",
-              color: "#1a1a1a",
+              color: "#f59e0b",
               marginBottom: "1rem",
             }}
           >
@@ -300,7 +297,7 @@ const AboutPage = () => {
           <p
             style={{
               fontSize: "1.1rem",
-              color: "#6c757d",
+              color: "#94a3b8",
               maxWidth: "700px",
               margin: "0 auto",
             }}
@@ -344,17 +341,16 @@ const AboutPage = () => {
                     display: "flex",
                     alignItems: "flex-start",
                     padding: "1.5rem",
-                    background: "white",
-                    borderRadius: "15px",
-                    border: "2px solid #f0f0f0",
+                    background: "#1a2332",
+                    borderRadius: "0",
+                    border: "1px solid #334155",
+                    borderLeft: "none",
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "#198754";
                     e.currentTarget.style.transform = "translateX(10px)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "#f0f0f0";
                     e.currentTarget.style.transform = "translateX(0)";
                   }}
                 >
@@ -372,7 +368,7 @@ const AboutPage = () => {
                       style={{
                         fontSize: "1.25rem",
                         fontWeight: "600",
-                        color: "#1a1a1a",
+                        color: "#f8fafc",
                         marginBottom: "0.5rem",
                       }}
                     >
@@ -381,7 +377,7 @@ const AboutPage = () => {
                     <p
                       style={{
                         fontSize: "1rem",
-                        color: "#6c757d",
+                        color: "#94a3b8",
                         margin: 0,
                         lineHeight: "1.7",
                       }}
@@ -410,12 +406,12 @@ const AboutPage = () => {
         <Container>
           <div
             style={{
-              background: "linear-gradient(135deg, #198754 0%, #0d6832 100%)",
-              borderRadius: "24px",
+              background: "#0f172a",
+              borderRadius: "0",
               padding: "4rem 2rem",
               position: "relative",
               overflow: "hidden",
-              boxShadow: "0 20px 60px rgba(25, 135, 84, 0.3)",
+              border: "1px solid #334155",
               textAlign: "center",
             }}
           >

@@ -10,24 +10,31 @@ import ContactPage from "./pages/ContactPage";
 import FinancialAdvisory from "./pages/FinancialAdvisory";
 import InvestmentServices from "./pages/InvestmentServices";
 import TaxAccounting from "./pages/TaxAccounting";
+import MonteCarloForm from "./pages/MonteCarloForm";
 
 const App = () => {
   return (
     <Router>
-      <Header />
-      <main className="container mt-4">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/term" element={<TermPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/financial-advisory" element={<FinancialAdvisory />} />
-          <Route path="/investment-services" element={<InvestmentServices />} />
-          <Route path="/tax-accounting" element={<TaxAccounting />} />
-        </Routes>
-      </main>
-      <Footer />
+      <div style={{ backgroundColor: "#0a0f1a", minHeight: "100vh" }}>
+        <Header />
+        <main style={{ backgroundColor: "transparent" }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/term" element={<TermPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/financial-advisory" element={<FinancialAdvisory />} />
+            <Route
+              path="/investment-services"
+              element={<InvestmentServices />}
+            />
+            <Route path="/tax-accounting" element={<TaxAccounting />} />
+            <Route path="/monte-carlo" element={<MonteCarloForm />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 };

@@ -62,23 +62,21 @@ const FAQ = () => {
     <>
       <style>{`
         .faq-accordion .accordion-item {
-          border: none;
-          background: white;
-          border-radius: 12px;
+          border: 1px solid #334155;
+          background: #1a2332;
+          border-radius: 0;
           margin-bottom: 1rem;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
           overflow: hidden;
           transition: all 0.3s ease;
         }
 
         .faq-accordion .accordion-item:hover {
-          box-shadow: 0 8px 25px rgba(25, 135, 84, 0.12);
           transform: translateY(-2px);
         }
 
         .faq-accordion .accordion-button {
-          background: white;
-          color: #1a1a1a;
+          background: #1a2332;
+          color: #f8fafc;
           font-weight: 600;
           font-size: 1.1rem;
           padding: 1.5rem 1.75rem;
@@ -87,9 +85,10 @@ const FAQ = () => {
         }
 
         .faq-accordion .accordion-button:not(.collapsed) {
-          background: linear-gradient(135deg, #198754 0%, #0d6832 100%);
-          color: white;
+          background: #0f172a;
+          color: #f59e0b;
           box-shadow: none;
+          border-bottom: 1px solid #64748b;
         }
 
         .faq-accordion .accordion-button:focus {
@@ -106,12 +105,12 @@ const FAQ = () => {
           padding: 1.5rem 1.75rem;
           font-size: 1rem;
           line-height: 1.7;
-          color: #4a4a4a;
-          background: white;
+          color: #cbd5e1;
+          background: #1a2332;
         }
 
         .faq-accordion .accordion-button:not(.collapsed)::after {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) saturate(100%) invert(66%) sepia(61%) saturate(549%) hue-rotate(356deg) brightness(103%) contrast(96%);
         }
       `}</style>
 
@@ -141,7 +140,7 @@ const FAQ = () => {
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 135, 84, 0.5) 100%)",
+              "linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%)",
             zIndex: 1,
           }}
         />

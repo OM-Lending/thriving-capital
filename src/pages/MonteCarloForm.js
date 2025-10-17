@@ -65,42 +65,46 @@ const MonteCarloForm = () => {
     <>
       <style>{`
         .monte-carlo-input {
-          border: 2px solid #e0e0e0;
-          border-radius: 12px;
+          border: 1px solid #334155;
+          border-radius: 0;
           padding: 0.85rem 1rem;
           font-size: 1rem;
           transition: all 0.3s ease;
-          background: white;
+          background: #1e293b;
+          color: #e2e8f0;
         }
 
         .monte-carlo-input:focus {
-          border-color: #198754;
-          box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.1);
+          border-color: #64748b;
+          box-shadow: none;
           outline: none;
+          background: #1a2332;
         }
 
         .monte-carlo-label {
           font-weight: 600;
-          color: #1a1a1a;
+          color: #f8fafc;
           margin-bottom: 0.5rem;
           font-size: 0.95rem;
         }
 
         .monte-carlo-btn {
-          background: linear-gradient(135deg, #198754 0%, #0d6832 100%);
+          background: #f59e0b;
           border: none;
-          border-radius: 12px;
+          border-radius: 0;
           padding: 1rem 2rem;
           font-size: 1.1rem;
           font-weight: 600;
-          color: white;
+          color: #0f172a;
           transition: all 0.3s ease;
           width: 100%;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
 
         .monte-carlo-btn:hover:not(:disabled) {
+          background: #d97706;
           transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(25, 135, 84, 0.3);
         }
 
         .monte-carlo-btn:disabled {
@@ -135,7 +139,7 @@ const MonteCarloForm = () => {
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 135, 84, 0.5) 100%)",
+              "linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%)",
             zIndex: 1,
           }}
         />
@@ -185,10 +189,10 @@ const MonteCarloForm = () => {
             >
               <Card
                 style={{
-                  border: "none",
-                  borderRadius: "18px",
+                  border: "1px solid #334155",
+                  borderRadius: "0",
                   padding: "2.5rem",
-                  boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
+                  background: "#1a2332",
                   position: "sticky",
                   top: "100px",
                 }}
@@ -197,7 +201,7 @@ const MonteCarloForm = () => {
                   style={{
                     fontSize: "1.8rem",
                     fontWeight: "700",
-                    color: "#1a1a1a",
+                    color: "#f59e0b",
                     marginBottom: "0.5rem",
                   }}
                 >
@@ -205,7 +209,7 @@ const MonteCarloForm = () => {
                 </h3>
                 <p
                   style={{
-                    color: "#6c757d",
+                    color: "#94a3b8",
                     marginBottom: "2rem",
                     fontSize: "0.95rem",
                   }}
@@ -216,7 +220,12 @@ const MonteCarloForm = () => {
                 {error && (
                   <Alert
                     variant="danger"
-                    style={{ borderRadius: "12px", border: "none" }}
+                    style={{
+                      borderRadius: "0",
+                      border: "1px solid #334155",
+                      background: "rgba(220, 53, 69, 0.1)",
+                      color: "#ef4444",
+                    }}
                   >
                     {error}
                   </Alert>
@@ -344,7 +353,7 @@ const MonteCarloForm = () => {
                       style={{
                         fontSize: "1.8rem",
                         fontWeight: "700",
-                        color: "#1a1a1a",
+                        color: "#f59e0b",
                         marginBottom: "2rem",
                       }}
                     >
@@ -360,14 +369,14 @@ const MonteCarloForm = () => {
                           {
                             label: "Investment Growth",
                             data: simulationResults,
-                            borderColor: "#198754",
-                            backgroundColor: "rgba(25, 135, 84, 0.1)",
+                            borderColor: "#f59e0b",
+                            backgroundColor: "rgba(245, 158, 11, 0.15)",
                             borderWidth: 3,
                             fill: true,
                             tension: 0.4,
                             pointRadius: 4,
                             pointHoverRadius: 6,
-                            pointBackgroundColor: "#198754",
+                            pointBackgroundColor: "#f59e0b",
                             pointBorderColor: "#fff",
                             pointBorderWidth: 2,
                           },
@@ -384,7 +393,7 @@ const MonteCarloForm = () => {
                               size: 18,
                               weight: "bold",
                             },
-                            color: "#1a1a1a",
+                            color: "#f8fafc",
                             padding: 20,
                           },
                           tooltip: {
@@ -399,16 +408,16 @@ const MonteCarloForm = () => {
                                 )}`;
                               },
                             },
-                            backgroundColor: "rgba(0, 0, 0, 0.8)",
+                            backgroundColor: "#1a2332",
                             padding: 12,
-                            borderColor: "#198754",
+                            borderColor: "#64748b",
                             borderWidth: 1,
                           },
                           legend: {
                             display: true,
                             position: "top",
                             labels: {
-                              color: "#1a1a1a",
+                              color: "#f8fafc",
                               font: {
                                 size: 14,
                               },
@@ -420,21 +429,24 @@ const MonteCarloForm = () => {
                             title: {
                               display: true,
                               text: "Simulation Number",
-                              color: "#6c757d",
+                              color: "#94a3b8",
                               font: {
                                 size: 14,
                                 weight: "bold",
                               },
                             },
                             grid: {
-                              color: "rgba(0, 0, 0, 0.05)",
+                              color: "rgba(255, 255, 255, 0.08)",
+                            },
+                            ticks: {
+                              color: "#94a3b8",
                             },
                           },
                           y: {
                             title: {
                               display: true,
                               text: "Investment Value ($)",
-                              color: "#6c757d",
+                              color: "#94a3b8",
                               font: {
                                 size: 14,
                                 weight: "bold",
@@ -442,12 +454,13 @@ const MonteCarloForm = () => {
                             },
                             ticks: {
                               beginAtZero: true,
+                              color: "#94a3b8",
                               callback: function (value) {
                                 return "$" + value.toLocaleString();
                               },
                             },
                             grid: {
-                              color: "rgba(0, 0, 0, 0.05)",
+                              color: "rgba(255, 255, 255, 0.08)",
                             },
                           },
                         },
@@ -469,7 +482,7 @@ const MonteCarloForm = () => {
                       style={{
                         fontSize: "1.5rem",
                         fontWeight: "600",
-                        color: "#1a1a1a",
+                        color: "#f59e0b",
                         marginBottom: "1.5rem",
                       }}
                     >
@@ -480,17 +493,18 @@ const MonteCarloForm = () => {
                         <div
                           style={{
                             padding: "1rem",
-                            background: "#f8f9fa",
-                            borderRadius: "12px",
-                            borderLeft: "4px solid #198754",
+                            background: "#0f172a",
+                            borderRadius: "0",
+                            border: "1px solid #334155",
+                            borderLeft: "none",
                           }}
                         >
-                          <div style={{ color: "#6c757d", fontSize: "0.9rem" }}>
+                          <div style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
                             Average Result
                           </div>
                           <div
                             style={{
-                              color: "#1a1a1a",
+                              color: "#f8fafc",
                               fontSize: "1.5rem",
                               fontWeight: "700",
                             }}
@@ -510,17 +524,18 @@ const MonteCarloForm = () => {
                         <div
                           style={{
                             padding: "1rem",
-                            background: "#f8f9fa",
-                            borderRadius: "12px",
-                            borderLeft: "4px solid #198754",
+                            background: "#0f172a",
+                            borderRadius: "0",
+                            border: "1px solid #334155",
+                            borderLeft: "none",
                           }}
                         >
-                          <div style={{ color: "#6c757d", fontSize: "0.9rem" }}>
+                          <div style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
                             Best Result
                           </div>
                           <div
                             style={{
-                              color: "#1a1a1a",
+                              color: "#f8fafc",
                               fontSize: "1.5rem",
                               fontWeight: "700",
                             }}
@@ -540,17 +555,18 @@ const MonteCarloForm = () => {
                         <div
                           style={{
                             padding: "1rem",
-                            background: "#f8f9fa",
-                            borderRadius: "12px",
-                            borderLeft: "4px solid #dc3545",
+                            background: "#0f172a",
+                            borderRadius: "0",
+                            border: "1px solid #334155",
+                            borderLeft: "none",
                           }}
                         >
-                          <div style={{ color: "#6c757d", fontSize: "0.9rem" }}>
+                          <div style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
                             Worst Result
                           </div>
                           <div
                             style={{
-                              color: "#1a1a1a",
+                              color: "#f8fafc",
                               fontSize: "1.5rem",
                               fontWeight: "700",
                             }}
@@ -570,17 +586,18 @@ const MonteCarloForm = () => {
                         <div
                           style={{
                             padding: "1rem",
-                            background: "#f8f9fa",
-                            borderRadius: "12px",
-                            borderLeft: "4px solid #0dcaf0",
+                            background: "#0f172a",
+                            borderRadius: "0",
+                            border: "1px solid #334155",
+                            borderLeft: "none",
                           }}
                         >
-                          <div style={{ color: "#6c757d", fontSize: "0.9rem" }}>
+                          <div style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
                             Total Simulations
                           </div>
                           <div
                             style={{
-                              color: "#1a1a1a",
+                              color: "#f8fafc",
                               fontSize: "1.5rem",
                               fontWeight: "700",
                             }}
@@ -595,18 +612,17 @@ const MonteCarloForm = () => {
                   {/* Graph Explanation */}
                   <Card
                     style={{
-                      border: "none",
-                      borderRadius: "18px",
+                      border: "2px solid #334155",
+                      borderRadius: "0",
                       padding: "2rem",
-                      boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
-                      background: "#f8f9fa",
+                      background: "#1a2332",
                     }}
                   >
                     <h4
                       style={{
                         fontSize: "1.3rem",
                         fontWeight: "600",
-                        color: "#1a1a1a",
+                        color: "#f59e0b",
                         marginBottom: "1rem",
                       }}
                     >
@@ -614,7 +630,7 @@ const MonteCarloForm = () => {
                     </h4>
                     <ul
                       style={{
-                        color: "#6c757d",
+                        color: "#94a3b8",
                         lineHeight: "1.8",
                         fontSize: "0.95rem",
                         marginBottom: 0,
@@ -645,28 +661,24 @@ const MonteCarloForm = () => {
               ) : (
                 <Card
                   style={{
-                    border: "none",
-                    borderRadius: "18px",
+                    border: "2px solid #334155",
+                    borderRadius: "0",
                     padding: "4rem 2rem",
-                    boxShadow: "0 10px 40px rgba(0, 0, 0, 0.08)",
                     textAlign: "center",
-                    background: "#f8f9fa",
+                    background: "#1a2332",
                   }}
                 >
-                  <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>
-                    📊
-                  </div>
                   <h4
                     style={{
                       fontSize: "1.5rem",
                       fontWeight: "600",
-                      color: "#1a1a1a",
+                      color: "#f59e0b",
                       marginBottom: "1rem",
                     }}
                   >
                     No Results Yet
                   </h4>
-                  <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                  <p style={{ color: "#94a3b8", marginBottom: 0 }}>
                     Enter your investment parameters and click "Run Simulation"
                     to see potential outcomes.
                   </p>

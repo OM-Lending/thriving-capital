@@ -37,7 +37,7 @@ function HomePage() {
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(25, 135, 84, 0.4) 100%)",
+              "linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%)",
             zIndex: 1,
           }}
         ></div>
@@ -49,33 +49,6 @@ function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              style={{
-                display: "inline-block",
-                backgroundColor: "rgba(25, 135, 84, 0.2)",
-                padding: "8px 24px",
-                borderRadius: "50px",
-                border: "1px solid rgba(255, 255, 255, 0.3)",
-                marginBottom: "2rem",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "0.95rem",
-                  fontWeight: "500",
-                  letterSpacing: "1.5px",
-                  textTransform: "uppercase",
-                  color: "rgba(255, 255, 255, 0.95)",
-                }}
-              >
-                Welcome to Thriving Capital
-              </span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -137,7 +110,7 @@ function HomePage() {
             style={{
               fontSize: "2.5rem",
               fontWeight: "700",
-              color: "#1a1a1a",
+              color: "#f59e0b",
               marginBottom: "0.75rem",
             }}
           >
@@ -146,7 +119,7 @@ function HomePage() {
           <p
             style={{
               fontSize: "1.1rem",
-              color: "#6c757d",
+              color: "#94a3b8",
               maxWidth: "700px",
               margin: "0 auto",
             }}
@@ -190,15 +163,23 @@ function HomePage() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <Card
-                  className="service-card h-100 shadow-sm"
+                  className="service-card h-100"
                   style={{
-                    borderRadius: "18px",
+                    borderRadius: "0",
                     overflow: "hidden",
-                    boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+                    border: "1px solid #334155",
+                    background: "#1a2332",
                     minHeight: "380px",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-5px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
                   <Card.Img
@@ -211,15 +192,26 @@ function HomePage() {
                   />
                   <Card.Body
                     className="d-flex flex-column align-items-center justify-content-between"
-                    style={{ flex: 1 }}
+                    style={{
+                      flex: 1,
+                      background: "#1a2332",
+                      padding: "2rem 1.5rem",
+                    }}
                   >
                     <Card.Title
                       className="fw-bold text-center"
-                      style={{ fontSize: "1.35rem", marginBottom: "0.5rem" }}
+                      style={{
+                        fontSize: "1.35rem",
+                        marginBottom: "0.5rem",
+                        color: "#f59e0b",
+                      }}
                     >
                       {service.title}
                     </Card.Title>
-                    <Card.Text className="text-center" style={{ flex: 1 }}>
+                    <Card.Text
+                      className="text-center"
+                      style={{ flex: 1, color: "#cbd5e1" }}
+                    >
                       {service.text}
                     </Card.Text>
                     <div style={{ marginTop: "-20px" }}>
@@ -243,13 +235,14 @@ function HomePage() {
       >
         <Container className="my-5">
           <Card
-            className="shadow-lg border-0"
             style={{
-              borderRadius: "20px",
+              borderRadius: "0",
               overflow: "hidden",
+              border: "1px solid #334155",
+              background: "#1a2332",
             }}
           >
-            <Card.Body className="p-0">
+            <Card.Body className="p-0" style={{ background: "#1a2332" }}>
               <Row className="g-0 align-items-center">
                 {/* Text Section - Left */}
                 <Col md={6} className="p-5">
@@ -263,7 +256,7 @@ function HomePage() {
                       style={{
                         fontSize: "2.2rem",
                         fontWeight: "700",
-                        color: "#1a1a1a",
+                        color: "#f59e0b",
                         marginBottom: "0.75rem",
                         lineHeight: "1.2",
                       }}
@@ -273,7 +266,7 @@ function HomePage() {
                     <p
                       style={{
                         fontSize: "1rem",
-                        color: "#6c757d",
+                        color: "#94a3b8",
                         marginBottom: "2rem",
                       }}
                     >
@@ -315,13 +308,13 @@ function HomePage() {
                           display: "flex",
                           alignItems: "flex-start",
                           padding: "1.25rem",
-                          backgroundColor: "#f8f9fa",
-                          borderRadius: "12px",
-                          borderLeft: "4px solid #198754",
+                          backgroundColor: "#0f172a",
+                          borderRadius: "0",
+                          borderLeft: "none",
                           transition: "all 0.3s ease",
                         }}
                         whileHover={{
-                          backgroundColor: "#e9ecef",
+                          backgroundColor: "#1e293b",
                           x: 5,
                         }}
                       >
@@ -339,7 +332,7 @@ function HomePage() {
                             style={{
                               fontSize: "1.15rem",
                               fontWeight: "600",
-                              color: "#1a1a1a",
+                              color: "#f8fafc",
                               marginBottom: "0.35rem",
                               lineHeight: "1.4",
                             }}
@@ -349,7 +342,7 @@ function HomePage() {
                           <p
                             style={{
                               fontSize: "0.95rem",
-                              color: "#6c757d",
+                              color: "#94a3b8",
                               marginBottom: "0",
                               lineHeight: "1.6",
                             }}
@@ -418,38 +411,14 @@ function HomePage() {
         <Container>
           <div
             style={{
-              background: "linear-gradient(135deg, #198754 0%, #0d6832 100%)",
-              borderRadius: "24px",
+              background: "#0f172a",
+              borderRadius: "0",
               padding: "4rem 2rem",
               position: "relative",
               overflow: "hidden",
-              boxShadow: "0 20px 60px rgba(25, 135, 84, 0.3)",
+              border: "1px solid #334155",
             }}
           >
-            {/* Decorative circles */}
-            <div
-              style={{
-                position: "absolute",
-                width: "300px",
-                height: "300px",
-                borderRadius: "50%",
-                background: "rgba(255, 255, 255, 0.1)",
-                top: "-150px",
-                right: "-100px",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                width: "200px",
-                height: "200px",
-                borderRadius: "50%",
-                background: "rgba(255, 255, 255, 0.08)",
-                bottom: "-100px",
-                left: "-50px",
-              }}
-            />
-
             {/* Content */}
             <Row className="justify-content-center">
               <Col

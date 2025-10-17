@@ -81,7 +81,7 @@ const FinancialAdvisory = () => {
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(25, 135, 84, 0.5) 100%)",
+              "linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%)",
             zIndex: 1,
           }}
         />
@@ -135,8 +135,8 @@ const FinancialAdvisory = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: "450px",
-                  borderRadius: "20px",
-                  boxShadow: "0 20px 60px rgba(0, 0, 0, 0.2)",
+                  borderRadius: "0",
+                  border: "1px solid #334155",
                   position: "relative",
                   overflow: "hidden",
                 }}
@@ -163,7 +163,7 @@ const FinancialAdvisory = () => {
                 style={{
                   fontSize: "2.5rem",
                   fontWeight: "700",
-                  color: "#1a1a1a",
+                  color: "#f59e0b",
                   marginBottom: "1.5rem",
                 }}
               >
@@ -173,7 +173,7 @@ const FinancialAdvisory = () => {
                 style={{
                   fontSize: "1.1rem",
                   lineHeight: "1.8",
-                  color: "#4a4a4a",
+                  color: "#cbd5e1",
                   marginBottom: "1.5rem",
                 }}
               >
@@ -187,7 +187,7 @@ const FinancialAdvisory = () => {
                 style={{
                   fontSize: "1.1rem",
                   lineHeight: "1.8",
-                  color: "#4a4a4a",
+                  color: "#cbd5e1",
                   marginBottom: "2rem",
                 }}
               >
@@ -204,8 +204,10 @@ const FinancialAdvisory = () => {
       {/* Services Section */}
       <div
         style={{
-          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          background: "#0f172a",
           padding: "5rem 0",
+          borderTop: "1px solid #334155",
+          borderBottom: "1px solid #334155",
         }}
       >
         <Container>
@@ -220,7 +222,7 @@ const FinancialAdvisory = () => {
               style={{
                 fontSize: "2.5rem",
                 fontWeight: "700",
-                color: "#1a1a1a",
+                color: "#f59e0b",
                 marginBottom: "1rem",
               }}
             >
@@ -229,7 +231,7 @@ const FinancialAdvisory = () => {
             <p
               style={{
                 fontSize: "1.2rem",
-                color: "#6c757d",
+                color: "#94a3b8",
                 maxWidth: "800px",
                 margin: "0 auto",
               }}
@@ -249,31 +251,26 @@ const FinancialAdvisory = () => {
                 >
                   <Card
                     style={{
-                      border: "none",
-                      borderRadius: "18px",
+                      border: "2px solid #334155",
+                      borderRadius: "0",
                       padding: "2rem",
                       height: "100%",
-                      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
                       transition: "all 0.3s ease",
-                      background: "white",
-                      borderLeft: "4px solid #198754",
+                      background: "#1a2332",
+                      borderLeft: "none",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = "translateY(-10px)";
-                      e.currentTarget.style.boxShadow =
-                        "0 20px 40px rgba(25, 135, 84, 0.15)";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow =
-                        "0 10px 30px rgba(0, 0, 0, 0.08)";
                     }}
                   >
                     <h5
                       style={{
                         fontSize: "1.3rem",
                         fontWeight: "600",
-                        color: "#1a1a1a",
+                        color: "#f59e0b",
                         marginBottom: "1rem",
                       }}
                     >
@@ -282,7 +279,7 @@ const FinancialAdvisory = () => {
                     <p
                       style={{
                         fontSize: "1rem",
-                        color: "#6c757d",
+                        color: "#cbd5e1",
                         lineHeight: "1.7",
                         margin: 0,
                       }}
@@ -311,12 +308,12 @@ const FinancialAdvisory = () => {
         <Container>
           <div
             style={{
-              background: "linear-gradient(135deg, #198754 0%, #0d6832 100%)",
-              borderRadius: "24px",
+              background: "#0f172a",
+              borderRadius: "0",
               padding: "4rem 2rem",
               position: "relative",
               overflow: "hidden",
-              boxShadow: "0 20px 60px rgba(25, 135, 84, 0.3)",
+              border: "1px solid #334155",
               textAlign: "center",
             }}
           >

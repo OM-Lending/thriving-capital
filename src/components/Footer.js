@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../assets/ThrLogo-3.png";
+import logo from "../assets/Thriving Capital.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,11 +10,11 @@ const Footer = () => {
     <>
       <style>{`
         .modern-footer {
-          background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+          background: #0f172a;
           color: #e0e0e0;
           padding-top: 4rem;
           padding-bottom: 2rem;
-          border-top: 3px solid #198754;
+          border-top: 1px solid #334155;
         }
 
         .footer-logo {
@@ -44,8 +44,8 @@ const Footer = () => {
           left: 0;
           width: 40px;
           height: 3px;
-          background: #198754;
-          border-radius: 2px;
+          background: #f59e0b;
+          border-radius: 0;
         }
 
         .footer-link {
@@ -58,7 +58,7 @@ const Footer = () => {
         }
 
         .footer-link:hover {
-          color: #198754;
+          color: #f59e0b;
           padding-left: 8px;
         }
 
@@ -71,7 +71,7 @@ const Footer = () => {
         }
 
         .footer-contact-icon {
-          color: #198754;
+          color: #f59e0b;
           margin-right: 0.75rem;
           font-size: 1.1rem;
           margin-top: 2px;
@@ -85,7 +85,7 @@ const Footer = () => {
         }
 
         .footer-contact-link:hover {
-          color: #198754;
+          color: #f59e0b;
         }
 
         .footer-description {
@@ -116,7 +116,7 @@ const Footer = () => {
         }
 
         .footer-bottom-link:hover {
-          color: #198754;
+          color: #f59e0b;
         }
 
         @media (max-width: 767px) {

@@ -52,13 +52,14 @@ const ContactPage = () => {
     <>
       <style>{`
         .contact-hero {
-          background: linear-gradient(135deg, #198754 0%, #0d6832 100%);
+          background: #0f172a;
           padding: 5rem 0 3rem;
           margin-top: -1rem;
           color: white;
           position: relative;
           overflow: hidden;
-          border-radius: 18px;
+          border-radius: 0;
+          border-bottom: 1px solid #334155;
         }
 
         .contact-hero::before {
@@ -73,42 +74,46 @@ const ContactPage = () => {
         }
 
         .contact-form-input {
-          border: 2px solid #e0e0e0;
-          border-radius: 12px;
+          border: 2px solid #334155;
+          border-radius: 0;
           padding: 0.85rem 1rem;
           font-size: 1rem;
           transition: all 0.3s ease;
-          background: white;
+          background: #1e293b;
+          color: #e2e8f0;
         }
 
         .contact-form-input:focus {
-          border-color: #198754;
-          box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.1);
+          border-color: #f59e0b;
+          box-shadow: none;
           outline: none;
+          background: #1a2332;
         }
 
         .contact-form-label {
           font-weight: 600;
-          color: #1a1a1a;
+          color: #f8fafc;
           margin-bottom: 0.5rem;
           font-size: 0.95rem;
         }
 
         .contact-submit-btn {
-          background: linear-gradient(135deg, #198754 0%, #0d6832 100%);
+          background: #f59e0b;
           border: none;
-          border-radius: 12px;
+          border-radius: 0;
           padding: 1rem 2rem;
           font-size: 1.1rem;
           font-weight: 600;
-          color: white;
+          color: #0f172a;
           transition: all 0.3s ease;
           width: 100%;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
 
         .contact-submit-btn:hover:not(:disabled) {
+          background: #d97706;
           transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(25, 135, 84, 0.3);
         }
 
         .contact-submit-btn:disabled {
@@ -117,29 +122,27 @@ const ContactPage = () => {
         }
 
         .contact-info-card {
-          background: white;
-          border: none;
-          border-radius: 18px;
+          background: #1a2332;
+          border: 1px solid #334155;
+          border-radius: 0;
           padding: 2rem;
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
           transition: all 0.3s ease;
           height: 100%;
         }
 
         .contact-info-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 15px 40px rgba(25, 135, 84, 0.15);
         }
 
         .contact-info-link {
-          color: #6c757d;
+          color: #cbd5e1;
           text-decoration: none;
           font-weight: 500;
           transition: color 0.3s ease;
         }
 
         .contact-info-link:hover {
-          color: #0d6832;
+          color: #f59e0b;
         }
       `}</style>
 
@@ -194,7 +197,7 @@ const ContactPage = () => {
                         style={{
                           fontWeight: "600",
                           marginBottom: "1rem",
-                          color: "#198754",
+                          color: "#f59e0b",
                           fontSize: "1.2rem",
                         }}
                       >
@@ -213,7 +216,7 @@ const ContactPage = () => {
                       </a>
                       <p
                         style={{
-                          color: "#6c757d",
+                          color: "#94a3b8",
                           fontSize: "0.9rem",
                           marginBottom: 0,
                         }}
@@ -238,7 +241,7 @@ const ContactPage = () => {
                         style={{
                           fontWeight: "600",
                           marginBottom: "1rem",
-                          color: "#198754",
+                          color: "#f59e0b",
                           fontSize: "1.2rem",
                         }}
                       >
@@ -274,7 +277,7 @@ const ContactPage = () => {
                         style={{
                           fontWeight: "600",
                           marginBottom: "1rem",
-                          color: "#198754",
+                          color: "#f59e0b",
                           fontSize: "1.2rem",
                         }}
                       >
@@ -282,7 +285,7 @@ const ContactPage = () => {
                       </h5>
                       <p
                         style={{
-                          color: "#6c757d",
+                          color: "#94a3b8",
                           marginBottom: 0,
                           lineHeight: "1.6",
                         }}
@@ -311,7 +314,7 @@ const ContactPage = () => {
                         style={{
                           fontWeight: "600",
                           marginBottom: "1rem",
-                          color: "#198754",
+                          color: "#f59e0b",
                           fontSize: "1.2rem",
                         }}
                       >
@@ -321,13 +324,13 @@ const ContactPage = () => {
                         <div
                           style={{
                             fontWeight: "600",
-                            color: "#1a1a1a",
+                            color: "#f8fafc",
                             marginBottom: "0.25rem",
                           }}
                         >
                           Monday - Friday
                         </div>
-                        <div style={{ color: "#6c757d" }}>
+                        <div style={{ color: "#94a3b8" }}>
                           9:00 AM - 5:00 PM
                         </div>
                       </div>
@@ -335,13 +338,13 @@ const ContactPage = () => {
                         <div
                           style={{
                             fontWeight: "600",
-                            color: "#1a1a1a",
+                            color: "#f8fafc",
                             marginBottom: "0.25rem",
                           }}
                         >
                           Saturday - Sunday
                         </div>
-                        <div style={{ color: "#6c757d" }}>Closed</div>
+                        <div style={{ color: "#94a3b8" }}>Closed</div>
                       </div>
                     </div>
                   </Card>
@@ -359,17 +362,17 @@ const ContactPage = () => {
             >
               <Card
                 style={{
-                  border: "none",
-                  borderRadius: "18px",
+                  border: "1px solid #334155",
+                  borderRadius: "0",
                   padding: "2.5rem",
-                  boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
+                  background: "#1a2332",
                 }}
               >
                 <h3
                   style={{
                     fontSize: "2rem",
                     fontWeight: "700",
-                    color: "#1a1a1a",
+                    color: "#f59e0b",
                     marginBottom: "0.5rem",
                   }}
                 >
@@ -377,7 +380,7 @@ const ContactPage = () => {
                 </h3>
                 <p
                   style={{
-                    color: "#6c757d",
+                    color: "#94a3b8",
                     marginBottom: "2rem",
                   }}
                 >
@@ -390,8 +393,13 @@ const ContactPage = () => {
                   <Alert
                     variant={formStatus === "success" ? "success" : "danger"}
                     style={{
-                      borderRadius: "12px",
-                      border: "none",
+                      borderRadius: "0",
+                      border: "1px solid #334155",
+                      background:
+                        formStatus === "success"
+                          ? "rgba(245, 158, 11, 0.1)"
+                          : "rgba(220, 53, 69, 0.1)",
+                      color: formStatus === "success" ? "#fbbf24" : "#ef4444",
                     }}
                   >
                     {formStatus === "success"
