@@ -71,7 +71,7 @@ const FAQ = () => {
         }
 
         .faq-accordion .accordion-item:hover {
-          transform: translateY(-2px);
+          border-color: #f59e0b;
         }
 
         .faq-accordion .accordion-button {

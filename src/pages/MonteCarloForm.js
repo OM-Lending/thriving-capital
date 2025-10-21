@@ -104,7 +104,6 @@ const MonteCarloForm = () => {
 
         .monte-carlo-btn:hover:not(:disabled) {
           background: #d97706;
-          transform: translateY(-2px);
         }
 
         .monte-carlo-btn:disabled {

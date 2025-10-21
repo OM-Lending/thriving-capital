@@ -243,12 +243,6 @@ const InvestmentServices = () => {
                       display: "flex",
                       flexDirection: "column",
                     }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                    }}
                   >
                     <div>
                       <h5
@@ -300,12 +294,6 @@ const InvestmentServices = () => {
                       borderLeft: "none",
                       display: "flex",
                       flexDirection: "column",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
                     <div>

@@ -175,12 +175,6 @@ function HomePage() {
                     justifyContent: "space-between",
                     transition: "all 0.3s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-5px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                  }}
                 >
                   <Card.Img
                     variant="top"
@@ -315,18 +309,8 @@ function HomePage() {
                         }}
                         whileHover={{
                           backgroundColor: "#1e293b",
-                          x: 5,
                         }}
                       >
-                        <div
-                          style={{
-                            fontSize: "2rem",
-                            marginRight: "1rem",
-                            flexShrink: 0,
-                          }}
-                        >
-                          {item.icon}
-                        </div>
                         <div>
                           <h4
                             style={{

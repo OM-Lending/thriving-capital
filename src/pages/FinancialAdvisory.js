@@ -259,12 +259,6 @@ const FinancialAdvisory = () => {
                       background: "#1a2332",
                       borderLeft: "none",
                     }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                    }}
                   >
                     <h5
                       style={{

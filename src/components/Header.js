@@ -56,7 +56,6 @@ const Header = () => {
 
         .custom-nav-link:hover {
           color: white !important;
-          transform: translateY(-2px);
         }
 
         .custom-nav-link::after {
@@ -93,7 +92,6 @@ const Header = () => {
 
         .custom-dropdown-toggle:hover {
           color: white !important;
-          transform: translateY(-2px);
         }
 
         .custom-dropdown-toggle::after {

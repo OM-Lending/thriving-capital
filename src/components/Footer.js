@@ -25,7 +25,6 @@ const Footer = () => {
 
         .footer-logo:hover {
           filter: brightness(1.2);
-          transform: scale(1.05);
         }
 
         .footer-section-title {

@@ -1,5 +1,8 @@
 import React from "react";
 import bgImage from "../assets/tBack4.jpg";
+import missionPic1 from "../assets/MissionPic1.webp";
+import missionPic2 from "../assets/MissionPic2.webp";
+import missionPic3 from "../assets/MissionPic3.webp";
 import { ContactUsButton } from "../assets/ContactUsButton.js";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -195,19 +198,19 @@ const AboutPage = () => {
           <Row className="g-4 mt-4">
             {[
               {
-                icon: "📊",
+                image: missionPic1,
                 title: "Financial Advisory",
                 desc: "Smart money management tailored to your unique goals and aspirations.",
                 delay: 0.2,
               },
               {
-                icon: "💰",
+                image: missionPic2,
                 title: "Investment Planning",
                 desc: "Expert insights and strategies to help grow and protect your wealth.",
                 delay: 0.4,
               },
               {
-                icon: "📈",
+                image: missionPic3,
                 title: "Tax Strategies",
                 desc: "Maximize returns while ensuring full compliance with regulations.",
                 delay: 0.6,
@@ -224,28 +227,32 @@ const AboutPage = () => {
                     style={{
                       border: "1px solid #334155",
                       borderRadius: "0",
-                      padding: "2rem",
+                      padding: "0",
                       height: "100%",
                       transition: "all 0.3s ease",
                       background: "#1a2332",
+                      overflow: "hidden",
                     }}
                     className="h-100"
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                    }}
                   >
-                    <div className="text-center">
-                      <div
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "200px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.title}
                         style={{
-                          fontSize: "3.5rem",
-                          marginBottom: "1.5rem",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
                         }}
-                      >
-                        {item.icon}
-                      </div>
+                      />
+                    </div>
+                    <div style={{ padding: "2rem" }} className="text-center">
                       <h4
                         style={{
                           fontSize: "1.4rem",
@@ -309,22 +316,18 @@ const AboutPage = () => {
         <Row className="g-4">
           {[
             {
-              icon: "🎯",
               title: "Client-Focused",
               desc: "Your financial success is our top priority, and we tailor every strategy to meet your specific needs.",
             },
             {
-              icon: "🔒",
               title: "Trustworthy",
               desc: "We build lasting relationships based on transparency, integrity, and ethical practices.",
             },
             {
-              icon: "🚀",
               title: "Results-Driven",
               desc: "We are committed to delivering measurable results that exceed your expectations.",
             },
             {
-              icon: "💡",
               title: "Innovative",
               desc: "We leverage cutting-edge financial strategies and technology to stay ahead of the curve.",
             },
@@ -338,8 +341,6 @@ const AboutPage = () => {
               >
                 <div
                   style={{
-                    display: "flex",
-                    alignItems: "flex-start",
                     padding: "1.5rem",
                     background: "#1a2332",
                     borderRadius: "0",
@@ -347,22 +348,7 @@ const AboutPage = () => {
                     borderLeft: "none",
                     transition: "all 0.3s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateX(10px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateX(0)";
-                  }}
                 >
-                  <div
-                    style={{
-                      fontSize: "2.5rem",
-                      marginRight: "1.5rem",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {value.icon}
-                  </div>
                   <div>
                     <h5
                       style={{

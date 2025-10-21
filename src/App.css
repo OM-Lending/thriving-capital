@@ -85,7 +85,7 @@ main {
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  border-color: #f59e0b;
 }
 
 .service-card img {

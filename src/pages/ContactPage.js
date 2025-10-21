@@ -113,7 +113,6 @@ const ContactPage = () => {
 
         .contact-submit-btn:hover:not(:disabled) {
           background: #d97706;
-          transform: translateY(-2px);
         }
 
         .contact-submit-btn:disabled {
@@ -131,7 +130,7 @@ const ContactPage = () => {
         }
 
         .contact-info-card:hover {
-          transform: translateY(-5px);
+          border-color: #f59e0b;
         }
 
         .contact-info-link {

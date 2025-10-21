@@ -244,12 +244,6 @@ const TaxAccounting = () => {
                       display: "flex",
                       flexDirection: "column",
                     }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                    }}
                   >
                     <div>
                       <h5
@@ -301,12 +295,6 @@ const TaxAccounting = () => {
                       borderLeft: "none",
                       display: "flex",
                       flexDirection: "column",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
                     <div>

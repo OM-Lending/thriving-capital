@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export function LearnMoreButton({ targetPage }) {
   const navigate = useNavigate();
@@ -12,39 +11,33 @@ export function LearnMoreButton({ targetPage }) {
   };
 
   return (
-    <motion.div
-      animate={{ x: 0 }}
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    <button
+      onClick={handleClick}
+      style={{
+        background: "transparent",
+        color: "#f59e0b",
+        border: "1px solid #64748b",
+        padding: "12px 28px",
+        fontSize: "15px",
+        fontWeight: "600",
+        borderRadius: "0",
+        boxShadow: "none",
+        transition: "all 0.3s ease",
+        outline: "none",
+        cursor: "pointer",
+        textTransform: "uppercase",
+        letterSpacing: "0.5px",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "#f59e0b";
+        e.currentTarget.style.background = "rgba(245, 158, 11, 0.1)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "#64748b";
+        e.currentTarget.style.background = "transparent";
+      }}
     >
-      <button
-        onClick={handleClick}
-        style={{
-          background: "transparent",
-          color: "#f59e0b",
-          border: "1px solid #64748b",
-          padding: "12px 28px",
-          fontSize: "15px",
-          fontWeight: "600",
-          borderRadius: "0",
-          boxShadow: "none",
-          transition: "all 0.3s ease",
-          outline: "none",
-          cursor: "pointer",
-          textTransform: "uppercase",
-          letterSpacing: "0.5px",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.borderColor = "#f59e0b";
-          e.currentTarget.style.transform = "translateY(-2px)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.borderColor = "#64748b";
-          e.currentTarget.style.transform = "translateY(0)";
-        }}
-      >
-        Learn More
-      </button>
-    </motion.div>
+      Learn More
+    </button>
   );
 }
