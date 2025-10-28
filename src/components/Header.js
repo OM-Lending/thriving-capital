@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/Thriving Capital.png";
+import logo from "../assets/Thriving Capital.svg";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

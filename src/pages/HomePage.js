@@ -6,7 +6,7 @@ import taxImage from "../assets/t3.jpg";
 import bgImage from "../assets/ThrBack.jpg";
 import whyUs from "../assets/whyus.jpg";
 import { LearnMoreButton } from "../assets/LearnMoreButton.js";
-import { ContactUsButton } from "../assets/ContactUsButton.js";
+import { GetStartedButton } from "../assets/GetStartedButton.js";
 import { motion } from "framer-motion";
 
 function HomePage() {
@@ -88,7 +88,7 @@ function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <ContactUsButton />
+              <GetStartedButton />
             </motion.div>
           </motion.div>
         </Container>
@@ -457,7 +457,7 @@ function HomePage() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <ContactUsButton />
+                  <GetStartedButton />
                 </motion.div>
               </Col>
             </Row>
