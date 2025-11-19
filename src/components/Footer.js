@@ -225,7 +225,7 @@ const Footer = () => {
               </div>
               <div className="footer-contact-item">
                 <span className="footer-contact-icon">📍</span>
-                <span>Level 4, 162 Macquarie St, Hobart TAS 7000</span>
+                <span>Level 6, 111 Macquarie St, Hobart TAS 7000</span>
               </div>
             </Col>
           </Row>

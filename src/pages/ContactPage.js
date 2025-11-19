@@ -289,7 +289,7 @@ const ContactPage = () => {
                           lineHeight: "1.6",
                         }}
                       >
-                        Level 4, 162 Macquarie St
+                        Level 6, 111 Macquarie St,
                         <br />
                         Hobart TAS 7000
                         <br />
