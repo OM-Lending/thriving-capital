@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Accordion, Card } from "react-bootstrap";
+import { Container, Accordion} from "react-bootstrap";
 import { motion } from "framer-motion";
 import bgImage from "../assets/tBack2.jpg";
 
@@ -97,8 +97,6 @@ const FAQ = () => {
         }
 
         .faq-accordion .accordion-button::after {
-          filter: ${(props) =>
-            props.collapsed ? "none" : "brightness(0) invert(1)"};
         }
 
         .faq-accordion .accordion-body {
