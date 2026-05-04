@@ -289,11 +289,13 @@ const ContactPage = () => {
                           lineHeight: "1.6",
                         }}
                       >
-                        Level 4, 162 Macquarie St,
+                        TAS Office
                         <br />
-                        Hobart TAS 7000
+                        Level 4, 162 Macquarie St, Hobart TAS 7000
                         <br />
-                        Australia
+                        QLD Office
+                        <br />
+                        Level 10, 88 Tribune Street, South Brisbane QLD 4101
                       </p>
                     </div>
                   </Card>
