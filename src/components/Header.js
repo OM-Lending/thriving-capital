@@ -19,19 +19,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
-  const navLinkStyle = {
-    fontSize: "0.95rem",
-    fontWeight: "500",
-    padding: "0.5rem 1rem",
-    color: "white",
-    transition: "all 0.3s ease",
-    position: "relative",
-  };
-
-  const activeLinkStyle = {
-    color: "#ffc107",
-  };
-
   return (
     <>
       <style>{`
