@@ -224,9 +224,11 @@ const Footer = () => {
                 </a>
               </div>
               <div className="footer-contact-item">
-                <span className="footer-contact-icon1">📍</span>
+                <span className="footer-contact-icon">📍</span>
                 <span>Level 4, 162 Macquarie St, Hobart TAS 7000</span>
-                <span className="footer-contact-icon2">📍</span>
+              </div>
+              <div className="footer-contact-item">
+                <span className="footer-contact-icon">📍</span>
                 <span>Level 10, 88 Tribune Street, South Brisbane QLD 4101</span>
               </div>
             </Col>
