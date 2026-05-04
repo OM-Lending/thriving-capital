@@ -292,10 +292,6 @@ const ContactPage = () => {
                         TAS Office
                         <br />
                         Level 4, 162 Macquarie St, Hobart TAS 7000
-                        <br />
-                        QLD Office
-                        <br />
-                        Level 10, 88 Tribune Street, South Brisbane QLD 4101
                       </p>
                     </div>
                   </Card>
