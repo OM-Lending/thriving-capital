@@ -279,20 +279,28 @@ const ContactPage = () => {
                           color: "#f59e0b",
                           fontSize: "1.2rem",
                         }}
-                      >
+                    >
                         Visit Us
                       </h5>
-                      <p
+                    <div
                         style={{
-                          color: "#94a3b8",
-                          marginBottom: 0,
-                          lineHeight: "1.6",
+                        color: "#94a3b8",
+                        marginBottom: 0,
+                        lineHeight: "1.6",
                         }}
-                      >
-                        TAS Office
+                    >
+                      <div style={{ marginBottom: "1rem" }}>
+                        <strong style={{ color: "#f8fafc" }}>TAS Office</strong>
                         <br />
                         Level 4, 162 Macquarie St, Hobart TAS 7000
-                      </p>
+                      </div>
+
+                      <div>
+                        <strong style={{ color: "#f8fafc" }}>QLD Office</strong>
+                        <br />
+                        Level 10, 88 Tribune Street, South Brisbane QLD 4101
+                      </div>
+                    </div>
                     </div>
                   </Card>
                 </motion.div>
