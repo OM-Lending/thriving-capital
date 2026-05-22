@@ -231,6 +231,10 @@ const Footer = () => {
                 <span className="footer-contact-icon">📍</span>
                 <span>Level 10, 88 Tribune Street, South Brisbane QLD 4101</span>
               </div>
+              <div className="footer-contact-item">
+                <span className="footer-contact-icon">📍</span>
+                <span>Level 1 Suite 4/25 Bell Street, Chinchilla QLD 4413</span>
+              </div>
             </Col>
           </Row>
 
