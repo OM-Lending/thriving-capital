@@ -300,6 +300,12 @@ const ContactPage = () => {
                         <br />
                         Level 10, 88 Tribune Street, South Brisbane QLD 4101
                       </div>
+
+                      <div style={{ marginBottom: "1rem" }}>
+                        <strong style={{ color: "#f8fafc" }}>TAS Office</strong>
+                        <br />
+                        Level 1 Suite 4/25 Bell Street, Chinchilla QLD 4413
+                      </div>
                     </div>
                     </div>
                   </Card>
