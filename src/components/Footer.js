@@ -235,6 +235,10 @@ const Footer = () => {
                 <span className="footer-contact-icon">📍</span>
                 <span>Level 1 Suite 4/25 Bell Street, Chinchilla QLD 4413</span>
               </div>
+              <div className="footer-contact-item">
+                <span className="footer-contact-icon">📍</span>
+                <span>Ground Floor, 470 St Kilda Road, Melbourne VIC 3004</span>
+              </div>
             </Col>
           </Row>
 
