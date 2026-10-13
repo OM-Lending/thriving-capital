@@ -294,6 +294,12 @@ const ContactPage = () => {
                         <br />
                         Level 4, 162 Macquarie St, Hobart TAS 7000
                       </div>
+                      
+                      <div style={{ marginBottom: "1rem" }}>
+                        <strong style={{ color: "#f8fafc" }}>VIC Office</strong>
+                        <br />
+                        Ground Floor, 470 St Kilda Rd, Melbourne VIC 3004
+                      </div>
 
                       <div>
                         <strong style={{ color: "#f8fafc" }}>QLD Office</strong>
